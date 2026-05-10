@@ -20,7 +20,7 @@ export default function GenerationCounter({ generationCount, plan }: Props) {
       <div className="h-[3px] bg-border rounded-full overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-700 ease-out"
-          style={{ width: `${pct}%`, backgroundColor: at ? '#4F8EF7' : '#00D084' }}
+          style={{ width: `${pct}%`, backgroundColor: at ? '#E8A530' : '#00D084' }}
         />
       </div>
     </div>

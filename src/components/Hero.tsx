@@ -12,7 +12,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(79,142,247,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,165,48,0.07) 0%, transparent 70%)',
         }}
       />
 
@@ -31,7 +31,7 @@ export default function Hero() {
       {/* Content — each child gets .hero-el for CSS stagger */}
       <div className="relative z-10 text-center px-5 max-w-5xl mx-auto w-full flex flex-col items-center gap-0">
         {/* Badge */}
-        <div className="hero-el inline-flex items-center gap-2 border border-[#1e1e1e] bg-[rgba(79,142,247,0.07)] rounded-full px-4 py-1.5 text-[11px] font-medium text-accent mb-10">
+        <div className="hero-el inline-flex items-center gap-2 border border-[#1e1e1e] bg-[rgba(232,165,48,0.07)] rounded-full px-4 py-1.5 text-[11px] font-medium text-accent mb-10">
           <span className="w-1.5 h-1.5 rounded-full bg-success" style={{ animation: 'fadeDot 2s ease-in-out infinite' }} />
           Powered by Claude AI · Free to start
         </div>

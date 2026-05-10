@@ -4,7 +4,7 @@ import { gsap } from '../lib/gsap'
 import { useReveal } from '../hooks/useReveal'
 
 const TEMPLATE_CARDS = [
-  { label: 'Standard README', icon: FileText,  accent: '#4F8EF7', desc: 'Classic open-source structure' },
+  { label: 'Standard README', icon: FileText,  accent: '#E8A530', desc: 'Classic open-source structure' },
   { label: 'CLI Tool Docs',   icon: Terminal,  accent: '#00D084', desc: 'Flags, commands, examples' },
   { label: 'npm Package Ref', icon: Package,   accent: '#F59E0B', desc: 'API reference and usage' },
   { label: 'Monorepo Guide',  icon: GitBranch, accent: '#A78BFA', desc: 'Workspace and package setup' },
@@ -179,9 +179,9 @@ function TemplateSelectorCard() {
             key={t}
             className="rounded-xl border text-xs font-medium flex items-center justify-center"
             style={{
-              borderColor:     i === active ? 'rgba(79,142,247,0.5)' : '#1e1e1e',
-              backgroundColor: i === active ? 'rgba(79,142,247,0.09)' : '#141416',
-              color:           i === active ? '#4F8EF7' : '#444',
+              borderColor:     i === active ? 'rgba(232,165,48,0.5)' : '#1e1e1e',
+              backgroundColor: i === active ? 'rgba(232,165,48,0.09)' : '#141416',
+              color:           i === active ? '#E8A530' : '#444',
               transform:       i === active ? 'scale(1.04)' : 'scale(1)',
               transition: 'all 0.35s cubic-bezier(0.25,0.46,0.45,0.94)',
             }}
@@ -192,7 +192,7 @@ function TemplateSelectorCard() {
       </div>
       <div
         className="w-full py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors duration-300"
-        style={{ background: '#4F8EF7', color: '#fff' }}
+        style={{ background: '#E8A530', color: '#fff' }}
       >
         {success && <CheckCircle2 className="w-3.5 h-3.5" />}
         {success ? 'Generated!' : 'Generate README'}
@@ -241,7 +241,7 @@ export default function Features() {
           <div
             key={i}
             className="reveal-item bg-surface border border-border rounded-card-lg p-6 flex flex-col gap-5
-              transition-all duration-300 hover:border-border-2 hover:shadow-[0_0_40px_rgba(79,142,247,0.07)]"
+              transition-all duration-300 hover:border-border-2 hover:shadow-[0_0_40px_rgba(232,165,48,0.07)]"
           >
             <div>
               <p className="font-mono text-[9px] text-accent uppercase tracking-[0.2em] mb-2">{card.label}</p>

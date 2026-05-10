@@ -5,7 +5,7 @@ import { useReveal } from '../hooks/useReveal'
 
 const FREE_FEATURES = ['3 README generations', 'Standard template', 'Copy & download']
 const PRO_FEATURES  = [
-  'Unlimited generations',
+  '100 generations / day',
   'All templates — CLI, npm, Monorepo',
   'Priority generation speed',
   'Copy & download',
@@ -63,8 +63,8 @@ export default function Pricing() {
           className="reveal-item rounded-card-lg p-8 flex flex-col gap-6 relative overflow-hidden
             transition-transform duration-300 hover:-translate-y-1"
           style={{
-            background: '#4F8EF7',
-            boxShadow: '0 20px 60px rgba(79,142,247,0.3), 0 0 0 1px rgba(79,142,247,0.5)',
+            background: '#E8A530',
+            boxShadow: '0 20px 60px rgba(232,165,48,0.3), 0 0 0 1px rgba(232,165,48,0.5)',
           }}
         >
           {/* Shine highlight */}
@@ -78,7 +78,7 @@ export default function Pricing() {
               </span>
             </div>
             <div className="flex items-baseline gap-1">
-              <span className="text-[44px] font-bold text-white tracking-tight">$7</span>
+              <span className="text-[44px] font-bold text-white tracking-tight">$10</span>
               <span className="text-white/60 text-sm">/month</span>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function Pricing() {
             <SignInButton mode="modal">
               <button className="w-full py-3 rounded-btn bg-white text-accent font-semibold text-sm
                 transition-all duration-200 hover:bg-white/92 hover:scale-[1.02] active:scale-[0.98]">
-                Get Pro — $7/mo
+                Get Pro — $10/mo
               </button>
             </SignInButton>
           )}

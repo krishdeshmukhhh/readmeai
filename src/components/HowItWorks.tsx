@@ -24,7 +24,7 @@ function TypingDemo() {
 
   return (
     <div className="w-full max-w-[360px]">
-      <div className="rounded-2xl border border-border bg-[#0c0c0c] overflow-hidden shadow-[0_0_48px_rgba(79,142,247,0.07)]">
+      <div className="rounded-2xl border border-border bg-[#0c0c0c] overflow-hidden shadow-[0_0_48px_rgba(232,165,48,0.07)]">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-surface">
           {[0, 1, 2].map(i => (
             <div key={i} className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
@@ -45,7 +45,7 @@ function TypingDemo() {
 /* ── Step 2: Scanning grid ───────────────────── */
 function ScanningGrid() {
   return (
-    <div className="w-full max-w-[360px] rounded-2xl border border-border bg-[#0c0c0c] overflow-hidden p-6 shadow-[0_0_48px_rgba(79,142,247,0.07)]">
+    <div className="w-full max-w-[360px] rounded-2xl border border-border bg-[#0c0c0c] overflow-hidden p-6 shadow-[0_0_48px_rgba(232,165,48,0.07)]">
       <div className="relative flex items-center justify-center py-4 overflow-hidden rounded-xl">
         <div className="grid grid-cols-10 gap-[13px]">
           {Array.from({ length: 50 }).map((_, i) => (
@@ -56,7 +56,7 @@ function ScanningGrid() {
         <div
           className="absolute top-0 bottom-0 w-12 pointer-events-none"
           style={{
-            background: 'linear-gradient(90deg, transparent, rgba(79,142,247,0.4) 50%, transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(232,165,48,0.4) 50%, transparent)',
             animation: 'scan 2.2s linear infinite',
           }}
         />

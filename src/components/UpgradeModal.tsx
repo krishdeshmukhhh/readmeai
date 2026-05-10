@@ -32,7 +32,7 @@ export default function UpgradeModal({ onClose }: Props) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
       <div className="bg-surface border border-border rounded-card-lg max-w-md w-full p-8 relative
-        shadow-[0_0_0_1px_rgba(79,142,247,0.1),0_20px_80px_rgba(0,0,0,0.8)]">
+        shadow-[0_0_0_1px_rgba(232,165,48,0.1),0_20px_80px_rgba(0,0,0,0.8)]">
         {/* Accent glow top */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-24 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -64,7 +64,7 @@ export default function UpgradeModal({ onClose }: Props) {
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/15 rounded-full blur-xl" />
             <p className="font-mono text-[9px] text-accent uppercase tracking-wider mb-2">Pro</p>
             <div className="flex items-baseline gap-1 mb-3">
-              <p className="text-white font-bold text-xl">$7</p>
+              <p className="text-white font-bold text-xl">$10</p>
               <span className="text-text-secondary text-xs">/mo</span>
             </div>
             <ul className="space-y-1.5">
@@ -86,7 +86,7 @@ export default function UpgradeModal({ onClose }: Props) {
         >
           {isLoading
             ? <><Loader2 className="w-4 h-4 animate-spin" />Redirecting…</>
-            : <><Zap className="w-4 h-4" />Upgrade to Pro — $7/mo</>
+            : <><Zap className="w-4 h-4" />Upgrade to Pro — $10/mo</>
           }
         </button>
       </div>
