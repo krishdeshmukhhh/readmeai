@@ -37,7 +37,7 @@ router.get('/:clerkId', requireAuth, async (req: AuthRequest, res: Response) => 
     return
   }
 
-  res.json({ plan: user.plan, generationCount: user.generationCount })
+  res.json({ plan: user.plan, generationCount: user.monthlyGenerationCount ?? 0 })
 })
 
 export default router

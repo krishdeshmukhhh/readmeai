@@ -3,7 +3,7 @@ import { SignInButton, useAuth } from '@clerk/clerk-react'
 import { Check } from 'lucide-react'
 import { useReveal } from '../hooks/useReveal'
 
-const FREE_FEATURES = ['3 README generations', 'Standard template', 'Copy & download']
+const FREE_FEATURES = ['1 generation / month', 'Standard template', 'Copy & download']
 const PRO_FEATURES  = [
   '100 generations / day',
   'All templates — CLI, npm, Monorepo',

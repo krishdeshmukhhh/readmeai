@@ -5,6 +5,8 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true },
   plan: { type: String, enum: ['free', 'pro'], default: 'free' },
   generationCount: { type: Number, default: 0 },
+  monthlyGenerationCount: { type: Number, default: 0 },
+  generationResetMonth: { type: String, default: '' },
   stripeCustomerId: { type: String },
   stripeSubscriptionId: { type: String },
   createdAt: { type: Date, default: Date.now },

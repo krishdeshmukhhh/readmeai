@@ -43,7 +43,7 @@ export default function UpgradeModal({ onClose }: Props) {
 
         <div className="mb-6">
           <h2 className="text-lg font-bold tracking-tight mb-1">You've hit your free limit</h2>
-          <p className="text-text-secondary text-sm">Upgrade to Pro for unlimited README generations.</p>
+          <p className="text-text-secondary text-sm">You've used your 1 free generation this month. Upgrade to Pro for 100/day.</p>
         </div>
 
         <div className="grid grid-cols-2 gap-3 mb-6">
@@ -52,7 +52,7 @@ export default function UpgradeModal({ onClose }: Props) {
             <p className="font-mono text-[9px] text-text-secondary uppercase tracking-wider mb-2">Free</p>
             <p className="text-white font-bold text-xl mb-3">$0</p>
             <ul className="space-y-1.5">
-              {['3 generations', 'Standard template'].map(f => (
+              {['1 generation / month', 'Standard template'].map(f => (
                 <li key={f} className="flex items-center gap-1.5 text-xs text-text-secondary">
                   <Check className="w-3 h-3 text-success" /> {f}
                 </li>

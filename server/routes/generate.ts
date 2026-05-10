@@ -6,7 +6,7 @@ import { generateReadme } from '../lib/claude.js'
 
 const router = Router()
 
-const FREE_LIMIT = 3
+const FREE_LIMIT = 1
 
 router.post('/', requireAuth, async (req: AuthRequest, res: Response) => {
   const { clerkId, projectName, description, techStack, templateType, githubUrl } =
@@ -35,7 +35,14 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response) => {
     return
   }
 
-  if (user.plan === 'free' && user.generationCount >= FREE_LIMIT) {
+  // Reset monthly count on first request of a new calendar month
+  const currentMonth = new Date().toISOString().slice(0, 7) // "YYYY-MM"
+  if (user.generationResetMonth !== currentMonth) {
+    await User.updateOne({ clerkId }, { $set: { monthlyGenerationCount: 0, generationResetMonth: currentMonth } })
+    user.monthlyGenerationCount = 0
+  }
+
+  if (user.plan === 'free' && user.monthlyGenerationCount >= FREE_LIMIT) {
     res.status(403).json({ error: 'limit_reached' })
     return
   }
@@ -43,7 +50,7 @@ router.post('/', requireAuth, async (req: AuthRequest, res: Response) => {
   try {
     const readme = await generateReadme({ projectName, description, techStack, templateType, githubUrl })
 
-    await User.updateOne({ clerkId }, { $inc: { generationCount: 1 } })
+    await User.updateOne({ clerkId }, { $inc: { generationCount: 1, monthlyGenerationCount: 1 } })
     await Generation.create({ userId: clerkId, projectName, description, techStack, templateType })
 
     res.json({ readme })

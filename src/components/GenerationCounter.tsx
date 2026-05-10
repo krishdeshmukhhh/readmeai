@@ -1,4 +1,4 @@
-const FREE_LIMIT = 3
+const FREE_LIMIT = 1
 
 interface Props {
   generationCount: number
@@ -14,7 +14,7 @@ export default function GenerationCounter({ generationCount, plan }: Props) {
   return (
     <div className="space-y-2 py-1">
       <div className="flex justify-between font-mono text-[10px] text-text-secondary uppercase tracking-wider">
-        <span>{used} / {FREE_LIMIT} free generations</span>
+        <span>{used} / {FREE_LIMIT} free generation this month</span>
         {at && <span className="text-accent">Limit reached</span>}
       </div>
       <div className="h-[3px] bg-border rounded-full overflow-hidden">
